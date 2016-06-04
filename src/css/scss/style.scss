@@ -1,0 +1,230 @@
+/* Variables */
+$background-teal: #00C3C3;
+$font-raleway: 'Raleway', sans-serif;
+$font-brayden: 'Brayden', sans-serif;
+$background-grey: #585858;
+$about-section-bg: #53BD92;
+$blog-section-bg: #E63357;
+$contact-section-bg: #FFA645;
+/*END - Variables*/
+
+
+/* Mixins */
+@mixin flexbox-display-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+@mixin align-items($value: stretch) {
+	@if $value == flex-start {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+	} @else if $value == flex-end {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+	} @else {
+		-webkit-box-align: $value;
+		-ms-flex-align: $value;
+	}
+	-webkit-align-items: $value;
+	-moz-align-items: $value;
+	align-items: $value;
+}
+
+@mixin flexbox-flex-size($value: 1) {
+  -webkit-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
+
+@mixin flex-direction($value: row) {
+	@if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+	} @else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	} @else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+	} @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
+}
+
+/*END - MIXINS*/
+
+@font-face {
+  font-family: "Brayden";
+  src: url('../assets/fonts/BraydenScriptRegular.otf');
+}
+
+html{
+  min-height: 100vh;
+  body{
+    min-height: 100vh;
+    margin:0;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+h2{
+  font-family: $font-raleway;
+  font-size:3em;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+p{
+  font-size:1.5em;
+  font-weight: 100;
+  margin: 0;
+  padding-top: 8px;
+}
+.p-small{
+    text-align: center;    
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  a{
+    color: white;
+    text-decoration: underline;
+    
+  }
+}
+#home-wrap{
+  @include flexbox-display-flex;
+  min-height: 100vh;
+}
+
+#header-position{
+  @include flexbox-display-flex;
+  //@include flex-direction(column);
+  position: fixed;
+  width: 10vw;
+  justify-content: space-between;
+  @include align-items(center);
+  justify-content: flex-end;
+  top: 30px;
+  bottom: 30px;
+}
+
+#home-sections {
+  @include flexbox-flex-size(1);
+  font-family: $font-brayden;
+  .body-section{
+    max-height: 100%;
+    position: relative;
+    &#about{
+       height:100vh;
+      z-index: 9999;
+      background-color: $background-teal;
+      color: white;
+      font-family: $font-brayden;
+          .content-container{
+      @include align-items(center);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    }
+    &#work{
+      background-position: center;
+      background-size: cover;
+      h2{
+        font-family: $font-brayden;
+        font-size: 5em;
+      }
+      .fixed-half{
+        color: $background-teal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        position: absolute;
+        width: 50vw;
+        height:100vh;
+        background-color: white;
+        &.fixed-now{
+          position: fixed;
+        }
+      }
+      .scroll-half{
+        width: 50vw;
+        position:relative;
+        left: 50vw;
+        .sample{
+          background-color: white;
+          border-bottom: 1px solid white;
+          height:100vh;
+          width: 50vw;
+        }
+      }
+    }
+    &#contact {
+    height:100vh;
+    background-color: $background-teal;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    .content-container{
+      @include align-items(center);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+      .section-title{
+        background-image:url(../img/contact-rain-pixels.svg);
+        background-position:center;
+        display: table;
+        height: 133px;
+        h2{
+          margin: 20px;
+          font-family: $font-brayden;
+          font-size: 5em;
+        }
+      }
+
+      
+      p{
+        font-family: $font-raleway;
+        &.sub-text{
+          margin: 0;
+          font-size: 1.5em;
+        }
+      }
+   
+      .social-links{
+        @include flexbox-display-flex;
+
+        .fa{
+          cursor: pointer;
+          font-size: 3em;
+          margin: 20px;
+          color: white;
+        }
+      }
+
+    }
+  }
+
+  }
+}

@@ -1,0 +1,215 @@
+/* Variables */
+/*END - Variables*/
+/* Mixins */
+/*END - MIXINS*/
+@font-face {
+  font-family: "Brayden";
+  src: url("../assets/fonts/BraydenScriptRegular.otf");
+}
+/* line 71, scss/style.scss */
+html {
+  min-height: 100vh;
+}
+/* line 73, scss/style.scss */
+html body {
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 80, scss/style.scss */
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* line 85, scss/style.scss */
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+/* line 93, scss/style.scss */
+p {
+  font-size: 1.5em;
+  font-weight: 100;
+  margin: 0;
+  padding-top: 8px;
+}
+
+/* line 99, scss/style.scss */
+.p-small {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 100;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 105, scss/style.scss */
+.p-small a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* line 111, scss/style.scss */
+#home-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* line 116, scss/style.scss */
+#header-position {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: fixed;
+  width: 10vw;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  justify-content: flex-end;
+  top: 30px;
+  bottom: 30px;
+}
+
+/* line 128, scss/style.scss */
+#home-sections {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-family: "Brayden", sans-serif;
+}
+/* line 131, scss/style.scss */
+#home-sections .body-section {
+  max-height: 100%;
+  position: relative;
+}
+/* line 134, scss/style.scss */
+#home-sections .body-section#about {
+  height: 100vh;
+  z-index: 9999;
+  background-color: #00C3C3;
+  color: white;
+  font-family: "Brayden", sans-serif;
+}
+/* line 140, scss/style.scss */
+#home-sections .body-section#about .content-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+/* line 148, scss/style.scss */
+#home-sections .body-section#work {
+  background-position: center;
+  background-size: cover;
+}
+/* line 151, scss/style.scss */
+#home-sections .body-section#work h2 {
+  font-family: "Brayden", sans-serif;
+  font-size: 5em;
+}
+/* line 155, scss/style.scss */
+#home-sections .body-section#work .fixed-half {
+  color: #00C3C3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  background-color: white;
+}
+/* line 165, scss/style.scss */
+#home-sections .body-section#work .fixed-half.fixed-now {
+  position: fixed;
+}
+/* line 169, scss/style.scss */
+#home-sections .body-section#work .scroll-half {
+  width: 50vw;
+  position: relative;
+  left: 50vw;
+}
+/* line 173, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample {
+  background-color: white;
+  border-bottom: 1px solid white;
+  height: 100vh;
+  width: 50vw;
+}
+/* line 181, scss/style.scss */
+#home-sections .body-section#contact {
+  height: 100vh;
+  background-color: #00C3C3;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+/* line 187, scss/style.scss */
+#home-sections .body-section#contact .content-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+/* line 194, scss/style.scss */
+#home-sections .body-section#contact .content-container .section-title {
+  background-image: url(../img/contact-rain-pixels.svg);
+  background-position: center;
+  display: table;
+  height: 133px;
+}
+/* line 199, scss/style.scss */
+#home-sections .body-section#contact .content-container .section-title h2 {
+  margin: 20px;
+  font-family: "Brayden", sans-serif;
+  font-size: 5em;
+}
+/* line 207, scss/style.scss */
+#home-sections .body-section#contact .content-container p {
+  font-family: "Raleway", sans-serif;
+}
+/* line 209, scss/style.scss */
+#home-sections .body-section#contact .content-container p.sub-text {
+  margin: 0;
+  font-size: 1.5em;
+}
+/* line 215, scss/style.scss */
+#home-sections .body-section#contact .content-container .social-links {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 218, scss/style.scss */
+#home-sections .body-section#contact .content-container .social-links .fa {
+  cursor: pointer;
+  font-size: 3em;
+  margin: 20px;
+  color: white;
+}
