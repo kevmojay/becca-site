@@ -51,7 +51,7 @@ p {
 /* line 105, scss/style.scss */
 .p-small a {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* line 111, scss/style.scss */
@@ -63,48 +63,96 @@ p {
   display: flex;
   min-height: 100vh;
 }
+/* line 114, scss/style.scss */
+#home-wrap .logo {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  max-width: 160px;
+  background-image: url("../assets/favicon/dinologo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 55px;
+  padding: 0;
+  margin: 0;
+}
 
-/* line 116, scss/style.scss */
+/* line 129, scss/style.scss */
 #header-position {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   position: fixed;
-  width: 10vw;
+  width: 100vw;
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center;
-  justify-content: flex-end;
-  top: 30px;
-  bottom: 30px;
+  height: 55px;
+  z-index: 999999;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+/* line 139, scss/style.scss */
+#header-position #site-nav {
+  display: block;
+  font-size: 16px;
+  float: left;
+  height: 55px;
+  width: 30vw;
+}
+/* line 145, scss/style.scss */
+#header-position #site-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 45px;
+}
+/* line 150, scss/style.scss */
+#header-position #site-nav ul li {
+  font-family: "Raleway", sans-serif;
+}
+/* line 152, scss/style.scss */
+#header-position #site-nav ul li a {
+  color: #00C3C3;
 }
 
-/* line 128, scss/style.scss */
+/* line 160, scss/style.scss */
 #home-sections {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   font-family: "Brayden", sans-serif;
 }
-/* line 131, scss/style.scss */
+/* line 163, scss/style.scss */
 #home-sections .body-section {
   max-height: 100%;
   position: relative;
 }
-/* line 134, scss/style.scss */
+/* line 166, scss/style.scss */
 #home-sections .body-section#about {
   height: 100vh;
   z-index: 9999;
   background-color: #00C3C3;
   color: white;
-  font-family: "Brayden", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
-/* line 140, scss/style.scss */
+/* line 172, scss/style.scss */
+#home-sections .body-section#about .curly {
+  font-family: "Brayden", sans-serif;
+  font-size: 5em;
+}
+/* line 176, scss/style.scss */
 #home-sections .body-section#about .content-container {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -116,17 +164,17 @@ p {
   justify-content: center;
   flex-direction: column;
 }
-/* line 148, scss/style.scss */
+/* line 184, scss/style.scss */
 #home-sections .body-section#work {
   background-position: center;
   background-size: cover;
 }
-/* line 151, scss/style.scss */
+/* line 187, scss/style.scss */
 #home-sections .body-section#work h2 {
   font-family: "Brayden", sans-serif;
   font-size: 5em;
 }
-/* line 155, scss/style.scss */
+/* line 191, scss/style.scss */
 #home-sections .body-section#work .fixed-half {
   color: #00C3C3;
   display: flex;
@@ -138,24 +186,79 @@ p {
   height: 100vh;
   background-color: white;
 }
-/* line 165, scss/style.scss */
+/* line 201, scss/style.scss */
 #home-sections .body-section#work .fixed-half.fixed-now {
   position: fixed;
 }
-/* line 169, scss/style.scss */
+/* line 205, scss/style.scss */
 #home-sections .body-section#work .scroll-half {
   width: 50vw;
   position: relative;
   left: 50vw;
 }
-/* line 173, scss/style.scss */
+/* line 209, scss/style.scss */
 #home-sections .body-section#work .scroll-half .sample {
   background-color: white;
   border-bottom: 1px solid white;
   height: 100vh;
   width: 50vw;
 }
-/* line 181, scss/style.scss */
+/* line 214, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#corgi {
+  background-image: url("../assets/photos/CorgiVector.png");
+  background-size: cover;
+}
+/* line 218, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#branding {
+  background-image: url("../assets/photos/Branding.png");
+  background-size: cover;
+}
+/* line 222, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#freud {
+  background-image: url("../assets/photos/FreudianSixvector.png");
+  background-size: cover;
+}
+/* line 226, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#gpup {
+  background-image: url("../assets/photos/Gpup.png");
+  background-size: cover;
+}
+/* line 230, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#purthday {
+  background-image: url("../assets/photos/Purrthday.png");
+  background-size: cover;
+}
+/* line 234, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#quantum {
+  background-image: url("../assets/photos/Quantum.png");
+  background-size: cover;
+}
+/* line 238, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#roadkill {
+  background-image: url("../assets/photos/RoadkillCards.png");
+  background-size: cover;
+}
+/* line 242, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#skateboard {
+  background-image: url("../assets/photos/SkateboardPortfoliopiece.png");
+  background-size: cover;
+}
+/* line 246, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#dvd {
+  background-image: url("../assets/photos/SpecialEditionDVDCase.png");
+  background-size: cover;
+}
+/* line 250, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#zigwig {
+  background-image: url("../assets/photos/ZigwigVector.jpg");
+  background-size: cover;
+}
+/* line 254, scss/style.scss */
+#home-sections .body-section#work .scroll-half .sample#logos {
+  background-image: url("../assets/photos/Logos.jpg");
+  background-size: cover;
+}
+/* line 261, scss/style.scss */
 #home-sections .body-section#contact {
   height: 100vh;
   background-color: #00C3C3;
@@ -163,7 +266,7 @@ p {
   background-size: cover;
   color: white;
 }
-/* line 187, scss/style.scss */
+/* line 267, scss/style.scss */
 #home-sections .body-section#contact .content-container {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -176,29 +279,29 @@ p {
   flex-direction: column;
   z-index: 9999;
 }
-/* line 194, scss/style.scss */
+/* line 274, scss/style.scss */
 #home-sections .body-section#contact .content-container .section-title {
   background-image: url(../img/contact-rain-pixels.svg);
   background-position: center;
   display: table;
   height: 133px;
 }
-/* line 199, scss/style.scss */
+/* line 279, scss/style.scss */
 #home-sections .body-section#contact .content-container .section-title h2 {
   margin: 20px;
   font-family: "Brayden", sans-serif;
   font-size: 5em;
 }
-/* line 207, scss/style.scss */
+/* line 287, scss/style.scss */
 #home-sections .body-section#contact .content-container p {
   font-family: "Raleway", sans-serif;
 }
-/* line 209, scss/style.scss */
+/* line 289, scss/style.scss */
 #home-sections .body-section#contact .content-container p.sub-text {
   margin: 0;
   font-size: 1.5em;
 }
-/* line 215, scss/style.scss */
+/* line 295, scss/style.scss */
 #home-sections .body-section#contact .content-container .social-links {
   display: -webkit-box;
   display: -moz-box;
@@ -206,7 +309,7 @@ p {
   display: -webkit-flex;
   display: flex;
 }
-/* line 218, scss/style.scss */
+/* line 298, scss/style.scss */
 #home-sections .body-section#contact .content-container .social-links .fa {
   cursor: pointer;
   font-size: 3em;

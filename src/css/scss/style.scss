@@ -104,25 +104,57 @@ p{
     margin-bottom: 10px;
   a{
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
     
   }
 }
 #home-wrap{
   @include flexbox-display-flex;
   min-height: 100vh;
+  .logo {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    max-width: 160px;
+    background-image: url('../assets/favicon/dinologo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 55px;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 #header-position{
   @include flexbox-display-flex;
-  //@include flex-direction(column);
+  @include flex-direction(row);
   position: fixed;
-  width: 10vw;
+  width: 100vw;
   justify-content: space-between;
   @include align-items(center);
-  justify-content: flex-end;
-  top: 30px;
-  bottom: 30px;
+  height: 55px;
+  z-index: 999999;
+  background-color: rgba(255,255,255,0.95);
+  #site-nav {
+    display: block;
+    font-size: 16px;
+    float: left;
+    height: 55px;
+    width: 30vw;
+    ul{
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      margin-right: 45px;
+      li {
+        font-family: $font-raleway;
+        a {
+          color: $background-teal;
+        }
+      }
+    }
+  }
 }
 
 #home-sections {
@@ -132,18 +164,22 @@ p{
     max-height: 100%;
     position: relative;
     &#about{
-       height:100vh;
+      height:100vh;
       z-index: 9999;
       background-color: $background-teal;
       color: white;
-      font-family: $font-brayden;
-          .content-container{
-      @include align-items(center);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
+      font-family: $font-raleway;
+      .curly {
+        font-family: $font-brayden;
+        font-size: 5em;
+      }
+      .content-container{
+        @include align-items(center);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
     }
     &#work{
       background-position: center;
@@ -175,6 +211,50 @@ p{
           border-bottom: 1px solid white;
           height:100vh;
           width: 50vw;
+          &#corgi{
+            background-image: url('../assets/photos/CorgiVector.png');
+            background-size: cover;
+          }
+          &#branding{
+            background-image: url('../assets/photos/Branding.png');
+            background-size: cover;
+          }
+          &#freud{
+            background-image: url('../assets/photos/FreudianSixvector.png');
+            background-size: cover;
+          }
+          &#gpup{
+            background-image: url('../assets/photos/Gpup.png');
+            background-size: cover;
+          }
+          &#purthday{
+            background-image: url('../assets/photos/Purrthday.png');
+            background-size: cover;
+          }
+          &#quantum{
+            background-image: url('../assets/photos/Quantum.png');
+            background-size: cover;
+          }
+          &#roadkill{
+            background-image: url('../assets/photos/RoadkillCards.png');
+            background-size: cover;
+          }
+          &#skateboard{
+            background-image: url('../assets/photos/SkateboardPortfoliopiece.png');
+            background-size: cover;
+          }   
+          &#dvd{
+            background-image: url('../assets/photos/SpecialEditionDVDCase.png');
+            background-size: cover;
+          } 
+          &#zigwig{
+            background-image: url('../assets/photos/ZigwigVector.jpg');
+            background-size: cover;
+          }     
+          &#logos{
+            background-image: url('../assets/photos/Logos.jpg');
+            background-size: cover;
+          }               
         }
       }
     }
